@@ -29,7 +29,10 @@ return new class extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->string('name');
-            $table->dropColumn(['first_name', 'last_name'],);
+            $table->dropColumn([
+                'first_name',
+                'last_name',
+            ]);
         });
     }
 };
