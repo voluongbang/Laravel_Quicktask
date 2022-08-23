@@ -1,8 +1,6 @@
 <?php
 
-use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,16 +15,10 @@ use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
     return view('welcome');
-})->name('welcome');
-Route::middleware('admin.check')->controller(UserController::class)->prefix('users')->group(function () {
-    Route::get('', 'index');
-    Route::post('', 'store');
-    Route::get('/create', 'create');
-    Route::get('/{user}', 'show');
-    Route::put('/{user}', 'update');
-    Route::delete('/{user}', 'destroy');
-    Route::get('/{user}/edit', 'edit');
 });
-Route::resources([
-    'posts' => PostController::class,
-]);
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
