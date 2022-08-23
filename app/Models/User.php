@@ -15,13 +15,22 @@ class User extends Authenticatable
     use HasApiTokens, HasFactory, Notifiable;
 
     /**
+     * The model's default values for attributes.
+     *
+     * @var array
+     */
+    protected $attributes = [
+        'is_admin' => false,
+    ];
+
+    /**
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
      */
     protected $fillable = [
-        'firstname',
-        'lastname',
+        'first_name',
+        'last_name',
         'username',
         'email',
         'password',
