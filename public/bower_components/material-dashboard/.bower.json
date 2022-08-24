@@ -1,0 +1,13 @@
+{
+  "name": "material-dashboard",
+  "_cacheHeaders": {
+    "ETag": "W/\"e7ae93b04af7152df05e81dfa8952422\"",
+    "Content-Type": "text/html; charset=utf-8"
+  },
+  "_release": "e-tag:W/\"e7ae93b",
+  "main": "index",
+  "_source": "https://github.com/voluongbang/material-dashboard",
+  "_target": "*",
+  "_originalSource": "https://github.com/voluongbang/material-dashboard",
+  "_direct": true
+}
