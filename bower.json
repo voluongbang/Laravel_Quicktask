@@ -1,0 +1,18 @@
+{
+  "name": "quick_task",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Bang.Voluong <vo.luong.bang@sun-asterisk.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/voluongbang/Laravel_Quicktask",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
