@@ -16,4 +16,13 @@ return [
     'signup' => 'Signup',
     'forgotPassword' => 'Forgot your password?',
     'confirmPassword' => 'Confirm password',
+    'user' => 'User',
+    'role' => 'Role',
+    'status' => 'Status',
+    'action' => 'Actions',
+    'detail' => 'Detail',
+    'edit' => 'Edit',
+    'delete' => 'Delete',
+    'close' => 'Close',
+    'detail_modal' => 'Detail',
 ];

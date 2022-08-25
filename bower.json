@@ -14,5 +14,10 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "bootstrap": "^5.2.0",
+    "fontawesome": "^6.1.2"
+  }
 }

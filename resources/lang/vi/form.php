@@ -14,5 +14,14 @@ return [
     'login' => 'Đăng nhập',
     'logout' => 'Đăng xuất',
     'signup' => 'Đăng ký',
-    'forgotPassword' => 'Quên mật khẩu?'
+    'forgotPassword' => 'Quên mật khẩu?',
+    'user' => 'Người dùng',
+    'role' => 'Vai trò',
+    'status' => 'Trạng thái',
+    'action' => 'Hành động',
+    'detail' => 'Chi tiết',
+    'edit' => 'Chỉnh sửa',
+    'delete' => 'Xóa',
+    'close' => 'Thoát',
+    'detail_modal' => 'Chi tiết',
 ];
