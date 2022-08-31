@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PostController extends Controller
 {
@@ -11,9 +12,12 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $user_id = $request->user()->id;
+        $posts = DB::table('posts')->where('user_id', $user_id)->get();
+
+        return view('post.posts', ['posts' => $posts]);
     }
 
     /**
@@ -23,7 +27,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('post.createPost');
     }
 
     /**
@@ -34,7 +38,14 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user_id = $request->user()->id;
+        $post = DB::table('posts')->insert([
+            'title' => $request->title,
+            'content' => $request->content,
+            'user_id' => $user_id,
+        ]);
+
+        return redirect()->route('posts.index');
     }
 
     /**
@@ -56,7 +67,9 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        //
+        $post = DB::table('posts')->find($id);
+
+        return view('post.editPost', ['post' => $post]);
     }
 
     /**
@@ -68,7 +81,14 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $post = DB::table('posts')
+            ->where('id', $id)
+            ->update([
+                'title' => $request->title,
+                'content' => $request->content
+            ]);
+
+        return redirect()->route('posts.index');
     }
 
     /**
@@ -79,6 +99,8 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $delete = DB::table('posts')->where('id', $id)->delete();
+
+        return redirect()->route('posts.index');
     }
 }
