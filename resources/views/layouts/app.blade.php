@@ -11,8 +11,8 @@
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="bower_components/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href=" {{asset('bower_components/fontawesome/css/all.min.css')}} ">
+    <link rel="stylesheet" href=" {{asset('bower_components/bootstrap/dist/css/bootstrap.min.css')}} ">
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -33,7 +33,7 @@
             {{ $slot }}
         </main>
     </div>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="{{URL::asset('bower_components/bootstrap/dist/js/bootstrap.min.js')}}"></script>
 </body>
 
 </html>
